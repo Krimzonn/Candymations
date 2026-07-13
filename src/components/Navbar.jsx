@@ -4,7 +4,8 @@ function Navbar() {
   return (
     <nav className="animated-gradient flex items-center justify-between px-8 py-4 bg-white">
       <NavLink to="/" className="font-heading text-cc-text text-lg font-bold">
-        Candymations <span className="text-cc-pink">.</span>
+        <span className="text-cc-pink">C</span>andymations{" "}
+        <span className="text-cc-pink">.</span>
       </NavLink>
 
       <div className="flex gap-6 font-body text-sm">
