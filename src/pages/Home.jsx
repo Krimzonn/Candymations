@@ -1,5 +1,13 @@
+import Hero from "../components/Hero";
+import AnimationBelt from "../components/AnimationBelt";
+
 function Home() {
-  return <h1 className="font-heading text-cc-pink text-4xl p-8">Home Page</h1>;
+  return (
+    <div>
+      <Hero />
+      <AnimationBelt />
+    </div>
+  );
 }
 
 export default Home;

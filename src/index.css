@@ -12,3 +12,45 @@
   --font-heading: "Quicksand", sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
 }
+
+@keyframes gradient-stride {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes belt-scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.belt-track {
+  animation: belt-scroll 30s linear infinite;
+  will-change: transform;
+}
+
+.belt-track:hover {
+  animation-play-state: paused;
+}
+
+.animated-gradient {
+  background: linear-gradient(90deg, #faf5ff, #d4b3ff, #8fc7ff, #faf5ff);
+  background-size: 300% 100%;
+  animation: gradient-stride 8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .belt-track {
+    animation: none;
+  }
+}
