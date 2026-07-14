@@ -36,13 +36,31 @@ function Library() {
     [0, -CONTENT_HEIGHT * 0.03],
   );
 
+  const skyColor = useTransform(
+    smoothProgress,
+    [0, 0.5, 1],
+    ["#FAF5FF", "#FBE8D9", "#2E2A4A"],
+  );
+
+  const cloudOpacity = useTransform(
+    smoothProgress,
+    [0, 0.6, 1],
+    [1, 0.6, 0.15],
+  );
+
+  const fireflyOpacity = useTransform(
+    smoothProgress,
+    [0, 0.4, 1],
+    [0.2, 0.6, 1],
+  );
+
   return (
-    <div
+    <motion.div
       ref={containerRef}
-      className="relative px-8 py-12 overflow-hidden max-w-6xl mx-auto"
-      style={{ minHeight: CONTENT_HEIGHT }}
+      className="relative py-12 overflow-hidden max-w-8xl mx-auto"
+      style={{ minHeight: CONTENT_HEIGHT, backgroundColor: skyColor }}
     >
-      <motion.div style={{ y: cloudY }}>
+      <motion.div style={{ y: cloudY, opacity: cloudOpacity }}>
         <SkyClouds />
       </motion.div>
       <River height={CONTENT_HEIGHT} />
@@ -53,7 +71,9 @@ function Library() {
         <TreeScenery count={animations.length} spacing={CARD_SPACING} />
       </motion.div>
 
-      <Fireflies count={animations.length + 5} spacing={CARD_SPACING} />
+      <motion.div style={{ opacity: fireflyOpacity }}>
+        <Fireflies count={animations.length + 5} spacing={CARD_SPACING} />
+      </motion.div>
 
       <div className="relative max-w-2xl mx-auto">
         {animations.map((anim, i) => (
@@ -66,7 +86,7 @@ function Library() {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }
 
