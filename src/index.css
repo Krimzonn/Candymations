@@ -40,6 +40,30 @@
   }
 }
 
+@keyframes firefly-pulse {
+  0% {
+    opacity: 0.3;
+    transform: scale(0.8) translate(0, 0);
+  }
+  25% {
+    opacity: 1;
+    transform: scale(1.1) translate(var(--drift-x), calc(var(--drift-y) * -1));
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.9) translate(calc(var(--drift-x) * 1.3), var(--drift-y));
+  }
+  75% {
+    opacity: 1;
+    transform: scale(1.15)
+      translate(calc(var(--drift-x) * 0.4), calc(var(--drift-y) * -0.6));
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(0.8) translate(0, 0);
+  }
+}
+
 .belt-track {
   animation: belt-scroll 30s linear infinite;
   will-change: transform;
@@ -58,6 +82,10 @@
   background: linear-gradient(90deg, #faf5ff, #d4b3ff, #8fc7ff, #faf5ff);
   background-size: 300% 100%;
   animation: gradient-stride 8s ease-in-out infinite;
+}
+
+.firefly-glow {
+  animation: firefly-pulse ease-in-out infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
