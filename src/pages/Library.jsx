@@ -3,6 +3,7 @@ import River from "../components/library/River";
 import PathCard from "../components/library/PathCard";
 import TreeScenery from "../components/library/TreeScenery";
 import SteppingStones from "../components/library/SteppingStones";
+import GrassScenery from "../components/library/GrassScenery";
 
 const CARD_SPACING = 260;
 const CONTENT_HEIGHT = animations.length * CARD_SPACING + 200;
@@ -14,6 +15,7 @@ function Library() {
       style={{ minHeight: CONTENT_HEIGHT }}
     >
       <River height={CONTENT_HEIGHT} />
+      <GrassScenery count={animations.length} spacing={CARD_SPACING} />
       <SteppingStones count={animations.length} spacing={CARD_SPACING} />
       <TreeScenery count={animations.length} spacing={CARD_SPACING} />
 
