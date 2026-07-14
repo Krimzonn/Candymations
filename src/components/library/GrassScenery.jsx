@@ -28,19 +28,17 @@ function GrassCluster({ top, left, seed }) {
   };
 
   const colors = ["#A8D9A0", "#93C98C", "#B5E0AE"];
-  const blades = Array.from({ length: 4 + Math.floor(rand() * 3) }, () => ({
+  const blades = Array.from({ length: 6 + Math.floor(rand() * 4) }, () => ({
     height: 24 + rand() * 18,
     rotate: rand() * 30 - 15,
     color: colors[Math.floor(rand() * colors.length)],
+    spacing: -4 + rand() * 3,
   }));
 
   return (
-    <div
-      className="absolute flex items-end gap-[-2px]"
-      style={{ top, left: `${left}%` }}
-    >
+    <div className="absolute flex items-end" style={{ top, left: `${left}%` }}>
       {blades.map((blade, i) => (
-        <div key={i} style={{ margin: i === 0 ? 0 : -4 }}>
+        <div key={i} style={{ margin: i === 0 ? 0 : blade.spacing }}>
           <GrassBlade {...blade} />
         </div>
       ))}
@@ -56,12 +54,12 @@ function GrassScenery({ count, spacing }) {
     return seed / 233280;
   };
 
-  const clusterCount = Math.floor(totalHeight / 180);
+  const clusterCount = Math.floor(totalHeight / 90);
   const clusters = Array.from({ length: clusterCount }, (_, i) => {
     const onLeft = rand() > 0.5;
     return {
       top: 40 + rand() * (totalHeight - 80),
-      left: onLeft ? rand() * 6 : 94 + rand() * 6,
+      left: onLeft ? 2 + rand() * 14 : 84 + rand() * 14,
       seed: Math.floor(rand() * 10000),
     };
   });
