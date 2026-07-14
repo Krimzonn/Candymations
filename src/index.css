@@ -34,6 +34,12 @@
   }
 }
 
+@keyframes river-dash {
+  to {
+    stroke-dashoffset: -34;
+  }
+}
+
 .belt-track {
   animation: belt-scroll 30s linear infinite;
   will-change: transform;
@@ -41,6 +47,11 @@
 
 .belt-track:hover {
   animation-play-state: paused;
+}
+
+.river-flow {
+  stroke-dasharray: 20 14;
+  animation: river-dash 2s linear infinite;
 }
 
 .animated-gradient {

@@ -10,14 +10,15 @@ function AboutStats() {
     <div className="px-8 py-14 max-w-4xl mx-auto grid md:grid-cols-2 gap-10 items-center">
       <div>
         <h2 className="font-heading text-cc-text text-2xl font-bold mb-3">
-          Why this exercise exists?
+          Why does this exist?
         </h2>
         <p className="font-body text-cc-muted text-sm leading-relaxed">
           Candymations is a small showcase of hand-written CSS and Tailwind
-          animations, built as a way to sharpen animation skills one effect at a
-          time. Every piece here is written from scratch, from simple entrance
-          effects to more elaborate signature pieces; meant to be both a
-          reference and a little bit of fun to click through.
+          animations, built as a way to sharpen my animation skills one effect
+          at a time. Every piece here is written from scratch, from simple
+          entrance effects to more elaborate signature pieces; meant to be both
+          a reference and a little bit of fun to click through.{" "}
+          <span className="text-cc-pink font-bold text-base">Enjoy!</span>
         </p>
       </div>
 

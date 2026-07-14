@@ -1,13 +1,31 @@
 import { animations } from "../data/animations";
-import AnimationCard from "../components/AnimationCard";
+import River from "../components/library/River";
+import PathCard from "../components/library/PathCard";
+import TreeScenery from "../components/library/TreeScenery";
+import SteppingStones from "../components/library/SteppingStones";
+
+const CARD_SPACING = 260;
+const CONTENT_HEIGHT = animations.length * CARD_SPACING + 200;
 
 function Library() {
   return (
-    <div className="font-heading text-cc-text text-4xl font-bold mb-8">
-      Animation Library
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {animations.map((anim) => (
-          <AnimationCard key={anim.slug} {...anim} />
+    <div
+      className="relative px-8 py-12 overflow-hidden max-w-6xl mx-auto"
+      style={{ minHeight: CONTENT_HEIGHT }}
+    >
+      <River height={CONTENT_HEIGHT} />
+      <SteppingStones count={animations.length} spacing={CARD_SPACING} />
+      <TreeScenery count={animations.length} spacing={CARD_SPACING} />
+
+      <div className="relative max-w-2xl mx-auto">
+        {animations.map((anim, i) => (
+          <div
+            key={anim.slug}
+            className={`flex ${i % 2 === 0 ? "justify-start" : "justify-end"}`}
+            style={{ marginBottom: CARD_SPACING - 150 }}
+          >
+            <PathCard {...anim} />
+          </div>
         ))}
       </div>
     </div>
