@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { useScroll, useTransform, motion } from "framer-motion";
+import { useScroll, useTransform, useSpring, motion } from "framer-motion";
 import { animations } from "../data/animations";
 import River from "../components/library/River";
 import PathCard from "../components/library/PathCard";
@@ -19,15 +19,21 @@ function Library() {
     offset: ["start start", "end end"],
   });
 
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
+
   const treeY = useTransform(
-    scrollYProgress,
+    smoothProgress,
     [0, 1],
-    [0, -CONTENT_HEIGHT * 0.15],
+    [0, -CONTENT_HEIGHT * 0.08],
   );
   const cloudY = useTransform(
-    scrollYProgress,
+    smoothProgress,
     [0, 1],
-    [0, -CONTENT_HEIGHT * 0.05],
+    [0, -CONTENT_HEIGHT * 0.03],
   );
 
   return (

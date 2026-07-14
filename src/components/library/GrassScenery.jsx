@@ -32,7 +32,7 @@ function GrassCluster({ top, left, seed }) {
     height: 24 + rand() * 18,
     rotate: rand() * 30 - 15,
     color: colors[Math.floor(rand() * colors.length)],
-    spacing: -4 + rand() * 3,
+    spacing: -5 + rand() * 3,
   }));
 
   return (
