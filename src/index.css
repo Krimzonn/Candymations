@@ -64,6 +64,28 @@
   }
 }
 
+@keyframes wing-flip {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes wing-flip-reverse {
+  0%,
+  45% {
+    opacity: 0;
+  }
+  50%,
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes elastic-bounce {
   0% {
     transform: scale(0);
@@ -117,6 +139,16 @@
 
 .firefly-glow {
   animation: firefly-pulse ease-in-out infinite;
+}
+
+.wing-top {
+  animation: wing-flip 0.4s steps(1) infinite;
+  transform: rotate(-13deg);
+}
+
+.wing-bottom {
+  animation: wing-flip-reverse 0.4s steps(1) infinite;
+  transform: rotate(85deg);
 }
 
 .elastic-bounce-anim {

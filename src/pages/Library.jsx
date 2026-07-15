@@ -8,6 +8,7 @@ import SteppingStones from "../components/library/SteppingStones";
 import GrassScenery from "../components/library/GrassScenery";
 import SkyClouds from "../components/library/SkyClouds";
 import Fireflies from "../components/library/Fireflies";
+import BirdMascot from "../components/library/BirdMascot";
 
 const CARD_SPACING = 260;
 const CONTENT_HEIGHT = animations.length * CARD_SPACING + 200;
@@ -38,8 +39,8 @@ function Library() {
 
   const skyColor = useTransform(
     smoothProgress,
-    [0, 0.5, 1],
-    ["#FAF5FF", "#FBE8D9", "#2E2A4A"],
+    [0, 0.25, 0.5, 0.75, 1],
+    ["#FAF5FF", "#E8D9F5", "#FBE8D9", "#D9A9C4", "#2E2A4A"],
   );
 
   const cloudOpacity = useTransform(
@@ -70,6 +71,8 @@ function Library() {
       <motion.div style={{ y: treeY }}>
         <TreeScenery count={animations.length} spacing={CARD_SPACING} />
       </motion.div>
+
+      <BirdMascot />
 
       <motion.div style={{ opacity: fireflyOpacity }}>
         <Fireflies count={animations.length + 5} spacing={CARD_SPACING} />
