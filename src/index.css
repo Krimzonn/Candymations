@@ -117,6 +117,30 @@
   }
 }
 
+@keyframes ripple-reveal {
+  from {
+    clip-path: circle(0% at 50% 50%);
+  }
+  to {
+    clip-path: circle(75% at 50% 50%);
+  }
+}
+
+@keyframes shimmer-sweep {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+
+.shimmer-block {
+  background: linear-gradient(90deg, #e8dcf7 25%, #f5eeff 50%, #e8dcf7 75%);
+  background-size: 200% 100%;
+  animation: shimmer-sweep 1.4s ease-in-out infinite;
+}
+
 .belt-track {
   animation: belt-scroll 30s linear infinite;
   will-change: transform;
@@ -157,6 +181,10 @@
 
 .fade-rise-anim {
   animation: fade-rise 0.6s ease-out both;
+}
+
+.ripple-reveal-anim {
+  animation: ripple-reveal 0.9s ease-out both;
 }
 
 @media (prefers-reduced-motion: reduce) {
