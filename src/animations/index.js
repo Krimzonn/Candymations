@@ -1,6 +1,7 @@
 import ElasticBounce from "./ElasticBounce";
 import FadeAndRise from "./FadeAndRise";
 import FlipCard from "./FlipCard";
+import LetterVibrate from "./LetterVibrate";
 import PulseGlow from "./PulseGlow";
 import RippleReveal from "./RippleReveal";
 import ShimmerLoading from "./ShimmerLoading";
@@ -16,4 +17,5 @@ export const animationComponents = {
   "slide-and-stagger": SlideAndStagger,
   "flip-card": FlipCard,
   "underline-sweep": UnderlineSweep,
+  "letter-vibrate": LetterVibrate,
 };

@@ -87,4 +87,12 @@ export const animations = [
     category: "Signature",
     difficulty: "signature",
   },
+  {
+    slug: "letter-vibrate",
+    name: "Letter Vibrate",
+    description:
+      "Hover across letters to make each one shake and burst into color, like a little rainbow wave.",
+    category: "Interaction",
+    difficulty: "signature",
+  },
 ];
