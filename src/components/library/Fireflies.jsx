@@ -26,7 +26,7 @@ function Fireflies({ count, spacing }) {
     return seed / 233280;
   };
 
-  const fireflyCount = Math.floor(totalHeight / 150);
+  const fireflyCount = Math.floor(totalHeight / 150) + 15;
   const flies = Array.from({ length: fireflyCount }, () => ({
     top: 40 + rand() * (totalHeight - 80),
     left: 10 + rand() * 80,

@@ -75,7 +75,7 @@ function Library() {
       <BirdMascot />
 
       <motion.div style={{ opacity: fireflyOpacity }}>
-        <Fireflies count={animations.length + 12} spacing={CARD_SPACING} />
+        <Fireflies count={animations.length} spacing={CARD_SPACING} />
       </motion.div>
 
       <div className="relative max-w-2xl mx-auto">
