@@ -25,7 +25,7 @@ function AnimationDetail() {
 
   return (
     <div className="max-w-2xl mx-auto px-8 py-16 text-center">
-      <div className="bg-white rounded-3xl shadow-lg shadow-cc-pink/10 p-10 min-8 min-h-[280px] flex items-center justify-center">
+      <div className="bg-white rounded-3xl shadow-lg shadow-cc-pink/10 p-10 mb-5 min-8 min-h-[280px] flex items-center justify-center">
         {AnimationComponent ? (
           <AnimationComponent key={replayKey} />
         ) : (

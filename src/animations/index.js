@@ -1,3 +1,4 @@
+import ButtonPress from "./ButtonPress";
 import ElasticBounce from "./ElasticBounce";
 import FadeAndRise from "./FadeAndRise";
 import FlipCard from "./FlipCard";
@@ -6,6 +7,7 @@ import PulseGlow from "./PulseGlow";
 import RippleReveal from "./RippleReveal";
 import ShimmerLoading from "./ShimmerLoading";
 import SlideAndStagger from "./SlideAndStagger";
+import SpinnerOrbit from "./SpinnerOrbit";
 import UnderlineSweep from "./UnderlineSweep";
 
 export const animationComponents = {
@@ -18,4 +20,6 @@ export const animationComponents = {
   "flip-card": FlipCard,
   "underline-sweep": UnderlineSweep,
   "letter-vibrate": LetterVibrate,
+  "button-press": ButtonPress,
+  "spinner-orbit": SpinnerOrbit,
 };

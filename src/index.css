@@ -191,6 +191,15 @@
   }
 }
 
+@keyframes orbit-spin {
+  from {
+    transform: rotate(0deg) translateX(24px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(24px) rotate(-360deg);
+  }
+}
+
 .stagger-item {
   opacity: 0;
   animation: stagger-slide 0.45s ease-out forwards;
@@ -307,9 +316,36 @@
   cursor: default;
 }
 
-.letter-vibrate:hover {
+.letter-active {
   color: var(--vibrate-color);
   animation: letter-shaker 0.4s ease-in-out infinite;
+}
+
+.button-press-anim {
+  transition: transform 0.1s ease;
+}
+
+.button-press-anim:active {
+  transform: scale(0.92);
+}
+
+.spinner-orbit-wrapper {
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+
+.spinner-orbit-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ff8fc7;
+  transform-origin: -18px 0;
+  animation: orbit-spin 1.2s linear infinite;
+  animation-delay: var(--orbit-delay);
 }
 
 @media (prefers-reduced-motion: reduce) {
