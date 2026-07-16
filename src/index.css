@@ -200,6 +200,31 @@
   }
 }
 
+@keyframes swirl-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes blob-melt {
+  0%,
+  100% {
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+  }
+  25% {
+    border-radius: 60% 40% 55% 45% / 45% 55% 40% 60%;
+  }
+  50% {
+    border-radius: 40% 60% 45% 55% / 60% 40% 65% 35%;
+  }
+  75% {
+    border-radius: 55% 45% 60% 40% / 40% 60% 45% 55%;
+  }
+}
+
 .stagger-item {
   opacity: 0;
   animation: stagger-slide 0.45s ease-out forwards;
@@ -346,6 +371,16 @@
   transform-origin: -18px 0;
   animation: orbit-spin 1.2s linear infinite;
   animation-delay: var(--orbit-delay);
+}
+
+.cotton-swirl-anim {
+  background: conic-gradient(from 0deg, #ff8fc7, #d4b3ff, #8fc7ff, #ff8fc7);
+  animation: swirl-spin 4s linear infinite;
+  filter: blur(3px);
+}
+
+.melting-blob-anim {
+  animation: blob-melt 4s ease-in-out infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {

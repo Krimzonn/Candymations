@@ -1,8 +1,10 @@
 import ButtonPress from "./ButtonPress";
+import CottonCandySwirl from "./CottonCandySwirl";
 import ElasticBounce from "./ElasticBounce";
 import FadeAndRise from "./FadeAndRise";
 import FlipCard from "./FlipCard";
 import LetterVibrate from "./LetterVibrate";
+import MeltingBlob from "./MeltingBlob";
 import PulseGlow from "./PulseGlow";
 import RippleReveal from "./RippleReveal";
 import ShimmerLoading from "./ShimmerLoading";
@@ -22,4 +24,6 @@ export const animationComponents = {
   "letter-vibrate": LetterVibrate,
   "button-press": ButtonPress,
   "spinner-orbit": SpinnerOrbit,
+  "cotton-candy-swirl": CottonCandySwirl,
+  "melting-blob": MeltingBlob,
 };
