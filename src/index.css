@@ -225,6 +225,38 @@
   }
 }
 
+@keyframes bubble-idle {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes particle-burst {
+  from {
+    transform: rotate(var(--angle)) translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(var(--angle)) translateX(45px);
+    opacity: 0;
+  }
+}
+
+@keyframes sparkle-fade-out {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.3) rotate(90deg);
+  }
+}
+
 .stagger-item {
   opacity: 0;
   animation: stagger-slide 0.45s ease-out forwards;
@@ -381,6 +413,22 @@
 
 .melting-blob-anim {
   animation: blob-melt 4s ease-in-out infinite;
+}
+
+.bubble-pop-anim {
+  animation: bubble-idle 1.5s ease-in-out infinite;
+}
+
+.bubble-particle {
+  animation: particle-burst 0.5s ease-out forwards;
+}
+
+.sparkle-fade {
+  color: #ffd873;
+  font-size: 16px;
+  transform: translate(-50%, -50%) scale(1);
+  animation: sparkle-fade-out 0.6s ease-out forwards;
+  pointer-events: none;
 }
 
 @media (prefers-reduced-motion: reduce) {

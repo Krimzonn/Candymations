@@ -1,3 +1,4 @@
+import BubblePop from "./BubblePop";
 import ButtonPress from "./ButtonPress";
 import CottonCandySwirl from "./CottonCandySwirl";
 import ElasticBounce from "./ElasticBounce";
@@ -10,6 +11,7 @@ import RippleReveal from "./RippleReveal";
 import ShimmerLoading from "./ShimmerLoading";
 import SlideAndStagger from "./SlideAndStagger";
 import SpinnerOrbit from "./SpinnerOrbit";
+import SugarSparkTrail from "./SugarSparkTrail";
 import UnderlineSweep from "./UnderlineSweep";
 
 export const animationComponents = {
@@ -26,4 +28,6 @@ export const animationComponents = {
   "spinner-orbit": SpinnerOrbit,
   "cotton-candy-swirl": CottonCandySwirl,
   "melting-blob": MeltingBlob,
+  "bubble-pop": BubblePop,
+  "sugar-sparkle-trail": SugarSparkTrail,
 };

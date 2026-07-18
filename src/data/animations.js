@@ -95,4 +95,19 @@ export const animations = [
     category: "Interaction",
     difficulty: "signature",
   },
+  {
+    slug: "bubble-pop",
+    name: "Bubble Pop",
+    description:
+      "Element scales up then pops out of view with a small burst on click.",
+    category: "Interaction",
+    difficulty: "signature",
+  },
+  {
+    slug: "sugar-sparkle-trail",
+    name: "Sugar Sparkle Trail",
+    description: "Small sparkle particles trail behind a moving element.",
+    category: "Signature",
+    difficulty: "signature",
+  },
 ];
