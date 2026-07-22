@@ -299,6 +299,67 @@
   }
 }
 
+@keyframes whirlpool-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes letter-fall-loop {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  to {
+    transform: translateY(240px);
+    opacity: 0;
+  }
+}
+
+@keyframes letter-fall-to-word {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+    color: rgba(255, 255, 255, 0.3);
+    font-weight: bold;
+    font-size: 0.875rem;
+  }
+  8% {
+    opacity: 1;
+  }
+  55% {
+    color: rgba(255, 255, 255, 0.3);
+    font-weight: bold;
+    font-size: 0.875rem;
+    transform: translateY(50px);
+  }
+  70% {
+    transform: translateY(80px);
+    color: #ff8fc7;
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+  85% {
+    transform: translateY(90px);
+  }
+  100% {
+    transform: translateY(80px);
+    color: #ff8fc7;
+    font-weight: 700;
+    font-size: 1.5rem;
+    opacity: 1;
+  }
+}
+
 .stagger-item {
   opacity: 0;
   animation: stagger-slide 0.45s ease-out forwards;
@@ -494,6 +555,19 @@
   opacity: 0.6;
 }
 
+.whirlpool-ring {
+  animation-name: whirlpool-spin;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.letter-fall {
+  animation: letter-fall-loop linear infinite;
+}
+
+.letter-fall-to-word {
+  animation: letter-fall-to-word 2.7s ease-out both;
+}
 @media (prefers-reduced-motion: reduce) {
   .belt-track {
     animation: none;

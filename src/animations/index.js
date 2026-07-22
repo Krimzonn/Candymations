@@ -5,6 +5,7 @@ import CottonCandySwirl from "./CottonCandySwirl";
 import ElasticBounce from "./ElasticBounce";
 import FadeAndRise from "./FadeAndRise";
 import FlipCard from "./FlipCard";
+import LetterRain from "./LetterRain";
 import LetterVibrate from "./LetterVibrate";
 import LiquidFill from "./LiquidFill";
 import MagneticButton from "./MagneticButton";
@@ -16,6 +17,7 @@ import SlideAndStagger from "./SlideAndStagger";
 import SpinnerOrbit from "./SpinnerOrbit";
 import SugarSparkTrail from "./SugarSparkTrail";
 import UnderlineSweep from "./UnderlineSweep";
+import WhirlPool from "./WhirlPool";
 
 export const animationComponents = {
   "elastic-bounce": ElasticBounce,
@@ -36,4 +38,6 @@ export const animationComponents = {
   "confetti-burst": ConfettiBurst,
   "magnetic-button": MagneticButton,
   "liquid-fill-progress": LiquidFill,
+  whirlpool: WhirlPool,
+  "letter-rain-sentence": LetterRain,
 };

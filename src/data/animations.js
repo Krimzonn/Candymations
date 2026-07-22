@@ -134,4 +134,20 @@ export const animations = [
     category: "Signature",
     difficulty: "signature",
   },
+  {
+    slug: "whirlpool",
+    name: "Whirlpool",
+    description:
+      "Layered colorful arcs spin at different speeds, swirling together like a candy whirlpool.",
+    category: "Signature",
+    difficulty: "signature",
+  },
+  {
+    slug: "letter-rain-sentence",
+    name: "Letter Rain Sentence",
+    description:
+      "Random letters rain down endlessly while a hidden few land in just the right spots to spell out a word.",
+    category: "Signature",
+    difficulty: "signature",
+  },
 ];
