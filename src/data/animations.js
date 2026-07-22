@@ -110,4 +110,28 @@ export const animations = [
     category: "Signature",
     difficulty: "signature",
   },
+  {
+    slug: "confetti-burst",
+    name: "Confetti Burst",
+    description:
+      "Click for a satisfying burst of colorful confetti that tumbles and falls.",
+    category: "Celebration",
+    difficulty: "signature",
+  },
+  {
+    slug: "magnetic-button",
+    name: "Magnetic Button",
+    description:
+      "The button is drawn toward your cursor, then springs back when you pull away.",
+    category: "Interaction",
+    difficulty: "signature",
+  },
+  {
+    slug: "liquid-fill-progress",
+    name: "Liquid Fill Progress",
+    description:
+      "A progress container fills up like liquid pouring in, complete with a rippling wavy surface.",
+    category: "Signature",
+    difficulty: "signature",
+  },
 ];

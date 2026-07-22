@@ -1,10 +1,13 @@
 import BubblePop from "./BubblePop";
 import ButtonPress from "./ButtonPress";
+import ConfettiBurst from "./ConfettiBurst";
 import CottonCandySwirl from "./CottonCandySwirl";
 import ElasticBounce from "./ElasticBounce";
 import FadeAndRise from "./FadeAndRise";
 import FlipCard from "./FlipCard";
 import LetterVibrate from "./LetterVibrate";
+import LiquidFill from "./LiquidFill";
+import MagneticButton from "./MagneticButton";
 import MeltingBlob from "./MeltingBlob";
 import PulseGlow from "./PulseGlow";
 import RippleReveal from "./RippleReveal";
@@ -30,4 +33,7 @@ export const animationComponents = {
   "melting-blob": MeltingBlob,
   "bubble-pop": BubblePop,
   "sugar-sparkle-trail": SugarSparkTrail,
+  "confetti-burst": ConfettiBurst,
+  "magnetic-button": MagneticButton,
+  "liquid-fill-progress": LiquidFill,
 };
